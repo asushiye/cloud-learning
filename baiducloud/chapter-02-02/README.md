@@ -1,8 +1,9 @@
-# baiducloud 百度地图 ------  chapter-02-02
-
+# baiducloud 百度开放地图 ------  chapter-02-02
 
 		入门指南
-		查找附近门店
+		查找附近门店实例
+			将门店上传LBS云存储
+			编写附近门店页面
 
 
 ## 入门指南 
@@ -29,13 +30,13 @@
 
 下面我们将通过一个实例来了解百度地图的开发
 
-## 查找附近门店
+## 查找附近门店实例
 
 业务需求：用户能按手机，PC自动定位地址，然后以定位为中心，检索附近的门店。
 
 技术实现：利用LBS云存储，存放门店数据，通过JavaScript api 来检索门店，并展示到页面上。
 
-### LBS云存储门店
+### 将门店上传LBS云存储
 
 LBS云地址： http://lbsyun.baidu.com/index.php?title=lbscloud
 
@@ -84,7 +85,7 @@ http://api.map.baidu.com/geodata/v3/poi/list?ak=ak值&geotable_id=193530&page_in
 
 更多 **LBS 云服务接口** ，查看官网
 
-### 附件门店页面
+### 编写附近门店页面
 
 
 在开发下面代码之前，需要学习下javascript api
@@ -179,6 +180,8 @@ src/Lbsmap.html
 </script>
 
 ```
+
+修改ak值为你申请的服务密钥
 
 ![Lbsmap](Lbsmap.png)
 
