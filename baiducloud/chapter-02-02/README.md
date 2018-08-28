@@ -16,13 +16,13 @@
 
 ### 通过创建应用，获取服务密钥(ak)
 
-进行百度开放平台 -> 控制台 -> 新建应用
+百度开放平台 -> 控制台 -> 新建应用
 
 应用类型可以选择浏览器类型(应用于页面)，和服务器类型(应用于APP)，
 
 设置白名单，可先填写 (*) 表示所有服务器都可以访问。上生产环境时，需要进行白名单的限制
 
-可以关注公众号：百度开放平台
+想要及时了解更多信息，可以关注公众号：百度开放平台
 
 详细内容，请查看官网文档
 
@@ -41,7 +41,7 @@ LBS云地址： http://lbsyun.baidu.com/index.php?title=lbscloud
 
 LBS云存储平台：http://lbsyun.baidu.com/data/v4/entry
 
-定义表属性，上传导入数据。
+#### 定义表属性
 
 ![lbscloud](lbscloud.png)
 
@@ -50,16 +50,34 @@ LBS云存储平台：http://lbsyun.baidu.com/data/v4/entry
 
 info_type 要设置为检索栏位，后面在检索时会自动匹配。
 
-上传导入数据
+#### 整理数据并上传导入
+
 ![uploadstore](uploadstore.png)
 
 先下载模版，然后整理好数据后，在上传到LBS云存储。
 
 ![csvfile](csvfile.png)
 
+```
+coord_type
+用户上传的坐标的类型：1、2、3、4
+uint32
+必选
+1：GPS经纬度坐标
+2：国测局加密经纬度坐标
+3：百度加密经纬度坐标
+4：百度加密墨卡托坐标
+```
+更多栏位，请查看LBS 云服务的服务文档
+
 门店数据上传到LBS的表以后我们，就可以进行页面的开发
 
+也可以通过接口来上传数据，参考LBS云服务的服务文档
 
+http://api.map.baidu.com/geodata/v3/poi/create // POST请求
+
+
+#### 数据导出
 查看已上传成功的数据，可使用postman来调用接口
 
 http://api.map.baidu.com/geodata/v3/poi/list?ak=ak值&geotable_id=193530&page_index=0&page_size=10
