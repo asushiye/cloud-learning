@@ -69,6 +69,32 @@ uint32
 3：百度加密经纬度坐标
 4：百度加密墨卡托坐标
 ```
+
+经纬度坐标栏位，需要调用web api 接口 
+
+地址编码接口来实现，将地址转换为百度加密经纬度坐标数据。
+
+```
+http://api.map.baidu.com/geocoder/v2/?address=安徽省阜阳市颍州区人民中路38号&output=json&ak=*******LPbBT58lQwWcsxS7slV
+
+```
+
+返回值
+```
+{
+    "status": 0,
+    "result": {
+        "location": {
+            "lng": 115.83107152316804,
+            "lat": 32.90996843519638
+        },
+        "precise": 1,
+        "confidence": 80,
+        "level": "道路"
+    }
+}
+```
+
 更多栏位，请查看LBS 云服务的服务文档
 
 门店数据上传到LBS的表以后我们，就可以进行页面的开发
