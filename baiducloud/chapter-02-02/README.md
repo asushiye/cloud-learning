@@ -75,7 +75,8 @@ uint32
 地址编码接口来实现，将地址转换为百度加密经纬度坐标数据。
 
 ```
-http://api.map.baidu.com/geocoder/v2/?address=安徽省阜阳市颍州区人民中路38号&output=json&ak=*******LPbBT58lQwWcsxS7slV
+
+http://api.map.baidu.com/geocoder/v2/?address=上海市普陀区澳门路168号2楼&output=json&ak=*******LPbBT58lQwWcsxS7slV
 
 ```
 
@@ -85,8 +86,8 @@ http://api.map.baidu.com/geocoder/v2/?address=安徽省阜阳市颍州区人民�
     "status": 0,
     "result": {
         "location": {
-            "lng": 115.83107152316804,
-            "lat": 32.90996843519638
+            "lng": 121.45215447216389,
+            "lat": 31.25466474251451
         },
         "precise": 1,
         "confidence": 80,
